@@ -1,5 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/users
+    url: jdbc:postgresql://localhost:5432/simplebank
     username: postgres
     password: root
+
+    spring.flyway.enabled: true
+    spring.flyway.locations: classpath:db/migration
