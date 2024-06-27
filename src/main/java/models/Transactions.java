@@ -4,23 +4,24 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity
-@Table(name = "transfers")
+@Entity(name = "transactions")
+@Table(name = "transactions")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Transfers {
+public class Transactions {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(columnDefinition = "UUID")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
-    private Double value;
+    private BigDecimal value;
 
     @ManyToOne
     @JoinColumn(name = "payer_id", nullable = false)
@@ -29,4 +30,6 @@ public class Transfers {
     @ManyToOne
     @JoinColumn(name = "payee_id", nullable = false)
     private User payee;
+
+    private LocalDateTime timestamp;
 }

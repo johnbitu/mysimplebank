@@ -6,12 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import java.util.UUID;
 
-@Table(name = "users", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "cpf"),
-        @UniqueConstraint(columnNames = "email")
-})
+@Table(name = "users")
 @Entity(name = "users")
 @Getter
 @Setter
@@ -19,10 +15,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(columnDefinition = "UUID")
-    private UUID id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotBlank
     private String full_name;
@@ -42,6 +36,7 @@ public class User {
     @NotNull
     private Double balance;
 
-    @NotNull
-    private Boolean isMerchant;
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
 }
