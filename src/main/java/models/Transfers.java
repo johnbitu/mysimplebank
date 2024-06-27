@@ -1,9 +1,8 @@
-package domain.transfers;
+package models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import domain.users.User;
 
 import java.util.UUID;
 

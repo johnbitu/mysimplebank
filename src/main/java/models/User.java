@@ -1,4 +1,4 @@
-package domain.users;
+package models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
