@@ -1,13 +1,13 @@
-package com.example.mysimplebank;
+package dev.simple.bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MysimplebankApplication {
+public class BankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MysimplebankApplication.class, args);
+		SpringApplication.run(BankApplication.class, args);
 	}
 
 }

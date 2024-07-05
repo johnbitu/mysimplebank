@@ -1,4 +1,0 @@
-CREATE TABLE user_type (
-    id BIGINT PRIMARY KEY UNIQUE NOT NULL,
-    description VARCHAR(255)
-)

@@ -1,9 +1,9 @@
-package config;
+package dev.simple.bank.config;
 
-import models.UserType;
+import dev.simple.bank.models.UserType;
+import dev.simple.bank.repository.UserTypeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-import repository.UserTypeRepository;
 
 import java.util.Arrays;
 

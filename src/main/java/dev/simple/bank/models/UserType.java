@@ -1,8 +1,7 @@
-package models;
+package dev.simple.bank.models;
 
 import jakarta.persistence.*;
 
-import java.security.PublicKey;
 
 @Entity
 @Table(name = "user_type")
